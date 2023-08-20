@@ -1,0 +1,399 @@
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
+
+/* tableau-1-caché */
+#tableau-1 {
+    display: none;
+}
+
+.contenu {
+    margin: 50px;
+}
+
+.div {
+    display: flex;
+}
+
+.titre {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titre-span {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0c4632;
+    border: 1px solid #0c4632;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+.logo-container-2 {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+.logo-drapeau {
+    width: 100px;
+    object-fit: cover;
+}
+
+#bar-recherche {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: end;
+}
+
+.recherche-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-left: 15px;
+}
+
+.icon i {
+    font-size: 16px; 
+}
+
+.pagination {
+    padding: 10px;
+}
+
+.recherche-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.recherche-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+
+#liste-faritra {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#items-par-page {
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+.liste-faritra {
+    border: 1px solid #ccc;
+}
+
+#prev-next {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+#prev-button, #next-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: rgb(12, 70, 50);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#page-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#page-links a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+#prev-button:disabled, #next-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media(min-width:200px){
+    .contenu {
+        margin: 20px;
+    }
+
+    .titre {
+        margin-bottom: 30px;
+    }
+
+    .titre-span {
+        font-size: 12px;
+        margin-top: 30px;
+    }
+
+    .logo-container {
+        left: 20px;
+    }
+
+    .logo-container-2 {
+        right: 20px;
+    }
+
+    .logo-drapeau {
+        width: 35px;
+    }
+
+    #bar-recherche {
+        display: inline;
+        margin-bottom: 30px;
+    }
+
+    .pagination {
+        text-align: start;
+    }
+
+    #items-par-page {
+        padding: 5px 10px;
+        margin: 0 5px;
+    }
+
+    #liste-faritra {
+        font-size: 15px;
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(max-width:200px){
+    .contenu {
+        margin: 20px;
+    }
+
+    .titre {
+        margin-bottom: 30px;
+    }
+
+    .titre-span {
+        font-size: 10px;
+        margin-top: 30px;
+    }
+
+    .logo-container {
+        left: 20px;
+    }
+
+    .logo-container-2 {
+        right: 20px;
+    }
+
+    .logo-drapeau {
+        width: 35px;
+    }
+
+    #bar-recherche {
+        display: inline;
+        margin-bottom: 30px;
+    }
+
+    #items-par-page {
+        padding: 5px 10px;
+        margin: 0 5px;
+    }
+
+    #liste-faritra {
+        font-size: 15px;
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(min-width:600px){
+    .contenu {
+        margin: 30px;
+    }
+
+    .titre {
+        margin-bottom: 30px;
+    }
+
+    .titre-span {
+        font-size: 14px;
+    }
+
+    .logo-container {
+        left: 30px;
+}
+
+    .logo-container-2 {
+        display: flex;
+        right: 30px;
+    }
+
+    .logo-drapeau {
+        width: 50px;
+    }
+
+    #bar-recherche {
+        display: inline;
+        margin-bottom: 30px;
+    }
+
+    #items-par-page {
+        padding: 10px 15px;
+        margin: 0 5px;
+    }
+
+    #liste-faritra {
+        font-size: 16px;
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width:768px){
+    .contenu {
+        margin: 30px;
+    }
+
+    .titre {
+        margin-bottom: 40px;
+    }
+
+    .titre-span {
+        font-size: 16px;
+    }
+
+    .logo-container {
+        left: 30px;
+    }
+
+    .logo-container-2 {
+        display: inline;
+        right: 30px;
+    }
+
+    .logo-drapeau {
+        width: 80px;
+    }
+
+    #bar-recherche {
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    #items-par-page {
+        padding: 10px 20px;
+        margin: 0 5px;
+    }
+
+    #liste-faritra {
+        font-size: 16px;
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(min-width:992px){
+    .contenu {
+        margin: 40px;
+    }
+
+    .titre {
+        margin-bottom: 50px;
+    }
+
+    .titre-span {
+        font-size: 20px;
+    }
+
+    .logo-container {
+        left: 40px;
+    }
+
+    .logo-container-2 {
+        display: inline;
+        right: 40px;
+    }
+
+    .logo-drapeau {
+        width: 80px;
+    }
+
+    #bar-recherche {
+        display: flex;
+    }
+
+    #items-par-page {
+        padding: 10px 15px;
+        margin: 0 5px;
+    }
+
+    #liste-faritra {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(min-width:1200px){
+    .contenu {
+        margin: 50px;
+    }
+
+    .logo-container {
+        left: 50px;
+}
+
+    .logo-container-2 {
+        right: 50px;
+    }
+
+    .logo-drapeau {
+        width: 100px;
+    }
+
+    #bar-recherche {
+        display: flex;
+    }
+
+    #items-par-page {
+        padding: 10px 20px;
+        margin: 0 5px;
+    }
+
+    #liste-faritra {
+        display: grid;
+        gap: 1.5em;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
